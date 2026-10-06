@@ -58,13 +58,12 @@ class StockDataAnalysis:
 
     def moving_averages(self):
     
-        data_MA20 = self.data['Close'].rolling(20).mean() #creating a 20-day moving average
-        data_MA20 = self.data['Close']['AAPL'].rolling(20).mean() #creating a 200-day moving average
-        data_MA200 = self.data['Close']['AAPL'].rolling(200).mean()
+        data_MA20 = self.data['Close']['AAPL'].rolling(20).mean() #creating a 20-day moving average
+        data_MA200 = self.data['Close']['AAPL'].rolling(200).mean() #creating the 200-day moving average
 
         plt.figure(figsize = (12, 8))
-        plt.plot(data_MA20, label='20-DAY MOVING AVERAGE')
-        plt.plot(data_MA200, label='200-DAY MOVING AVERAGE')
+        plt.plot(data_MA20, label = '20-DAY MOVING AVERAGE')
+        plt.plot(data_MA200, label = '200-DAY MOVING AVERAGE')
 
         plt.xlabel('VOLUME TRADED')
         plt.ylabel('SHARE PRICE')
