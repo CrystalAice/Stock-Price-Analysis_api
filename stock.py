@@ -30,10 +30,10 @@ class StockDataAnalysis:
     
     def observations(self):
         close_prices = self.data['Close']  # just the Close prices for all tickers
-        sns.set_theme(style='whitegrid')
+        sns.set_theme(style = 'whitegrid')
         
         figure, ax = plt.subplots(figsize=(10, 5))
-        sns.lineplot(data=close_prices, ax=ax)
+        sns.lineplot(data = close_prices, ax=ax)
         ax.set_ylabel('CLOSING SHARE PRICE')
         ax.set_xlabel('DATE')
         ax.set_title('CLOSING SHARE PRICES')
